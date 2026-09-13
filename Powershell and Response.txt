@@ -1,0 +1,14 @@
+Remove-Item .\ai_requests.db -ErrorAction SilentlyContinue
+
+$body = '{"prompt": "Explain async in Python in one sentence", "temperature": 0.7}'
+
+Invoke-RestMethod -Uri http://localhost:8000/chat -Method Post -ContentType "application/json" -Body '{"prompt": "Explain async in Python in one sentence", "temperature": 0.2}'
+
+Response in text from AI LLM:
+
+request_id : b31f9d2f-57e6-4217-95f4-7a7b61105478
+response   : In Python, `async` is a keyword used to define asynchronous functions, also known as coroutines, which allow for non-blocking, concurrent execution of tasks using the `await`
+             keyword to suspend and resume function execution.
+model      : meta/llama-3.3-70b-instruct
+latency_ms : 136763
+timestamp  : 8/19/2026 4:50:00 PM

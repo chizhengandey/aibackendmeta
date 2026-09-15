@@ -15,11 +15,11 @@ from dotenv import load_dotenv
 load_dotenv()  # Load environment variables from .env file
 
 DATABASE_PATH = os.getenv("DATABASE_PATH", "./ai_requests.db") 
-LLM_API_KEY = os.getenv("LLM_API_KEY","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") # set this in your env
+LLM_API_KEY = os.getenv("LLM_API_KEY","xxxxx") # set this in your env
 # LLM_API_URL = os.getenv("LLM_API_URL", "https://api.openai.com/v1/chat/completions") 
 LLM_API_URL = os.getenv("LLM_API_URL", "https://integrate.api.nvidia.com/v1/chat/completions") 
 # LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4o-mini") 
-LLM_MODEL = os.getenv("LLM_MODEL", "meta/llama-3.3-70b-instruct") 
+LLM_MODEL = os.getenv("LLM_MODEL", "openai/gpt-oss-20b") 
 # REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "300"))  # seconds 
 REQUEST_TIMEOUT = 3000.0
 
